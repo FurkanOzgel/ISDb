@@ -3,7 +3,8 @@ import pandas as pd
 #Deletes all data
 
 '''
-df = pd.DataFrame(columns=["name", "artist", "is_popular", "youtube_url", "img_url", "isdb_point"])
+df = pd.DataFrame(columns=["name", "artist", "is_popular", "youtube_url",
+                           "img_url", "isdb_point"])
 df.to_json("demo-data/response.json")
 '''
 

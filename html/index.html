@@ -6,12 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Bootstrap Import -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" 
+        rel="stylesheet">
+        
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     
-    <title>ISDb</title>
+    <title>Popular – ISDb</title>
     <link rel = "icon" href = "../img/icon.svg" type = "image/x-icon">
 
-    <link rel="stylesheet" href="css/theme.css">
+    
 
 </head>
 <body style="background-color:white;">
@@ -26,13 +30,10 @@
                 <!-- Nav Bar Pages Start -->
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item" >
-                        <a class="nav-link active" style="font-weight:500;" aria-current="page" href="index.html">Home</a>
+                        <a class="nav-link active" style="font-weight:500;" aria-current="page" href="index.html">Popular</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="top-page.html">Top</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="popular-page.html">Popular</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="about-page.html">About</a>
@@ -50,6 +51,38 @@
             </div>
         </div>
     </nav>
-    
+    <main>
+        <aside class="big-song-card" >
+            <div class="big-song-card-video" onmouseover="myOverFunction()" onmouseout="myOutFunction()">
+                <iframe class="big-song-card-iframe" src="https://www.youtube.com/embed/zU2_jPxz9q4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+                <div class="big-song-card-video-overview" >
+                    <div class="overview-black-div">
+                        <p class="overview-header">Ara - Zeynep Bastık </p>
+                        <p class="overview-score"><i class="material-icons overview-score-icon" style="font-size: 32px;">star</i>9.5</p>
+                        
+                    </div>
+                    <img class="overview-artist-img"
+                        src="https://i.scdn.co/image/ab67616d0000b27393b5dbed900db2b66d8b8ad4">
+                    
+                </div>
+            </div>
+        </aside>
+
+    </main>
+
+
+    <script>
+        var styleElem = document.head.appendChild(document.createElement("style"));
+
+        function myOverFunction() {
+            document.getElementsByClassName('big-song-card-video-overview')[0].style.visibility = 'hidden';
+            styleElem.innerHTML = ".big-song-card-video:before {visibility: hidden;}";
+
+        }
+        function myOutFunction() {
+            document.getElementsByClassName('big-song-card-video-overview')[0].style.visibility = 'visible';
+            styleElem.innerHTML = ".big-song-card-video:before {visibility: visible;}";
+        }
+        </script>
 </body>
 </html>
