@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     
-    <title>Popular – ISDb</title>
+    <title>ISDb</title>
     <link rel = "icon" href = "img/icon.svg" type = "image/x-icon">
 
     
@@ -30,7 +30,7 @@
                 <!-- Nav Bar Pages Start -->
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item" >
-                        <a class="nav-link active" style="font-weight:500;color:white" aria-current="page" href="index.html">Popular</a>
+                        <a class="nav-link active" style="font-weight:bold;color:white" aria-current="page" href="index.html">Popular</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" style="color:white" href="top-page.html">Top</a>
@@ -44,7 +44,9 @@
                 <!-- Search Bar Start -->
                 <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
+                    <button class="btn" style="color: white; height: 40px;" type="submit">
+                        <i class="material-icons" style="font-size: 27px;">search</i>
+                    </button>
                 </form>
                 <!-- Search Bar End -->
 
@@ -66,6 +68,7 @@
                 </div>
             </div>
         </article>
+
         <aside class="side-popular-list">
             <ul id="side-list" >
             </ul>
@@ -76,11 +79,14 @@
     <script>
         var styleElem = document.head.appendChild(document.createElement("style"));
 
-        function myOverFunction() {
+        // Hides overview when mouse is on iframe
+        function myOverFunction() { 
             document.getElementsByClassName('big-song-card-video-overview')[0].style.visibility = 'hidden';
             styleElem.innerHTML = ".big-song-card-video-container:before {visibility: hidden;}";
 
         }
+
+        // Shows overview when mouse is not on iframe
         function myOutFunction() {
             document.getElementsByClassName('big-song-card-video-overview')[0].style.visibility = 'visible';
             styleElem.innerHTML = ".big-song-card-video-container:before {visibility: visible;}";
@@ -88,6 +94,9 @@
 
         let list = document.getElementById("side-list");
 
+
+
+        // Fetches data from response.json file and render them as li.
         fetch('demo-data/response.json')
             .then((response) => response.json())
             .then((json) => {
@@ -105,7 +114,7 @@
                                 <img id="side-li-img" src="`+json.img_url[i]+`">
                                 <div class="side-li-info-container">
                                     <p class="side-li-name-info">`+json.name[i]+`<br>
-                                        <span style="font-size: 17px; ">&nbsp;&nbsp;&nbsp;-`+json.artist[i]+`</span></p>
+                                        <span style="font-size: 15px; color:gray;">&nbsp;&nbsp;&nbsp;-`+json.artist[i]+`</span></p>
                                     <p class="side-li-rate-info">
                                         <i id="side-li-star-icon" class="material-icons">star</i>`+json.isdb_rate[i]+`</p> 
                                 </div>
