@@ -1,0 +1,70 @@
+.navbar {
+    position: fixed;
+    width: 100%; 
+    z-index: 2;
+    height: 55px;
+}
+
+#top-song-list {
+    margin:10px;
+    margin-top: 65px;
+    position: absolute;
+    padding-left: 0px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.top-list-li {
+    width: 25%;
+}
+
+.top-list-item {
+    background-color: #181818;
+    padding: 10px;
+    border-radius: 20px;
+    margin: 10px;
+    border: 2px solid #383535;
+    
+}
+
+.top-list-item-container {
+    position:relative;
+    display: inline-block;
+    background-color: #181818;
+    width: 100%;
+    z-index: 0;
+}
+
+.top-list-item-img {
+    width: 100%;
+    aspect-ratio: 1,1;
+    border-radius: 15px;
+
+}
+
+.top-list-item-header {
+    margin-left:10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    line-height: 1em;
+    height: 20px;
+    margin-top: 20px;
+}
+
+.top-list-item-rate-info {
+    float:right;
+    margin-bottom: 0px;
+    margin-right: 10px;
+    font-size: 17px;
+    font-weight: bold;
+    color: white;
+}
+
+.side-li-star-icon {
+    font-size: 20px;
+    color:#f5c518;
+    display: inline-flex;
+    vertical-align: middle;
+    margin-bottom: 5px;
+}
