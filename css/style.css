@@ -158,3 +158,12 @@ body {
 #side-list {
     padding-left: 0px;
 }
+
+#info-container {
+    border-radius: 20px;
+    background-color: #181818;
+    width: calc( 100% - 68% - 45px);
+    float: right;
+    margin-top: 70px;
+    margin-right: 15px;
+}
