@@ -4,7 +4,7 @@
     
 # ISDb
 
-ISDb şarkılar için kurulmuş bir puanlama sitesidir. ISDb sitesini kullanarak şarkılara on üzerinden puan verebilir, gelmiş geçmiş en yüksek puanlı şarkıları ve popüler şarkıları görüntüleyebilirsiniz.
+ISDb şarkılar için kurulmuş bir puanlama sitesidir. ISDb sitesini kullanarak şarkılara on üzerinden puan verebilir ve gelmiş geçmiş en yüksek puanlı şarkıları görüntüleyebilirsiniz. Sitenin ana sayfasında bulunduğunuz dönem içinde en çok oy verme işlemi yapılan şarkılar yer alır. Bu sayede yeni çıkmış şarkıları kolalıkla görebilir ve puanlayabilirsiniz.
 
 ## Kullanılan Teknolojiler
 
