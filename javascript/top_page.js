@@ -1,3 +1,8 @@
+// Redirect detail page when clicked popular song card
+function clickHandler(id) {
+    window.location.href = '../detail-page.html?id='+id;
+}
+
 fetch('../demo-data/response.json')
     .then((response) => response.json())
     .then((json) => {
@@ -30,7 +35,7 @@ fetch('../demo-data/response.json')
             li.className = "top-list-li";
 
             li.innerHTML =`
-            <div class="top-list-item">
+            <div class="top-list-item" id="`+id+`" onclick="clickHandler(this.id)">
                 <div class="top-list-item-container">
                     <img class="top-list-item-img" src="`+json.img_url[id]+`">
                     <div class="side-li-info-container">

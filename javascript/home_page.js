@@ -15,6 +15,10 @@ function myOutFunction() {
 
 let list = document.getElementById("side-list");
 
+// Redirect detail page when clicked popular song card
+function clickHandler(id) {
+    window.location.href = '../detail-page.html?id='+id;
+}
 
 
 // Fetches data from response.json file and render them as li.
@@ -29,7 +33,7 @@ fetch('../demo-data/response.json')
                 li.innerText = json.name[i];
                 li.id = "popular-list-item"
                 li.innerHTML = `
-                <div class="side-li-container">
+                <div class="side-li-container" id="`+i+`" onclick="clickHandler(this.id)">
                     <div class="side-li-inner-container">
                         <img id="side-li-img" src="`+json.img_url[i]+`">
                         <div class="side-li-info-container">
@@ -45,3 +49,4 @@ fetch('../demo-data/response.json')
             }
         }
     });
+

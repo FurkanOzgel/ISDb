@@ -1,25 +1,16 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Bootstrap Import -->
+    <link rel = "icon" href = "img/icon.svg" type = "image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" 
         rel="stylesheet">
-        
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    
-    <title>ISDb</title>
-    <link rel = "icon" href = "img/icon.svg" type = "image/x-icon">
-
-    
-
 </head>
-<body style="background-color: #000000;">
-
+<body>
     <nav class="navbar navbar-expand-lg" style="background-color: #121212;">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html">
@@ -30,7 +21,7 @@
                 <!-- Nav Bar Pages Start -->
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item" >
-                        <a class="nav-link active" style="font-weight:bold;color:white" aria-current="page" href="index.html">Popular</a>
+                        <a class="nav-link" style="color:white" aria-current="page" href="index.html">Popular</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" style="color:white" href="top-page.html">Top</a>
@@ -50,28 +41,6 @@
             </div>
         </div>
     </nav>
-    <main>
-        <article class="big-song-card" >
-            <div class="big-song-card-video-container" onmouseover="myOverFunction()" onmouseout="myOutFunction()">
-                <iframe class="big-song-card-iframe" src="https://www.youtube.com/embed/zU2_jPxz9q4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
-                <div class="big-song-card-video-overview" >
-                    <div class="overview-black-div">
-                        <p class="overview-header">Ara - Zeynep Bastık</span> </p>
-                        <p class="overview-score"><i class="material-icons overview-score-icon" style="font-size: 32px;">star</i>6.5</p>   
-                    </div>
-                    <img class="overview-artist-img"
-                        src="https://i.scdn.co/image/ab67616d0000b27393b5dbed900db2b66d8b8ad4">
-                    
-                </div>
-            </div>
-        </article>
-
-        <aside class="side-popular-list">
-            <ul id="side-list" >
-            </ul>
-        </aside>
-
-    </main>
-    <script src="javascript/home_page.js"></script>
+    <script src="javascript/detail_page.js"></script>
 </body>
 </html>
